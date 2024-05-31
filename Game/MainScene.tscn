@@ -1,0 +1,111 @@
+[gd_scene load_steps=7 format=3 uid="uid://c56gn7yjsnsw4"]
+
+[ext_resource type="Script" path="res://Game/MainScene.gd" id="1_7jh2u"]
+[ext_resource type="Texture2D" uid="uid://cd042arow24w5" path="res://Assets/Background/background-image.jpg" id="2_4aqxu"]
+[ext_resource type="Theme" uid="uid://co422u2sbopcm" path="res://Game/Themes/CountryButtonTheme.tres" id="3_vovhb"]
+[ext_resource type="Theme" uid="uid://dgvc7jtgg5rfw" path="res://Game/Themes/LabelsTheme.tres" id="4_7vig2"]
+[ext_resource type="Theme" uid="uid://5osc00qbyquo" path="res://Game/Themes/InfoLabels.tres" id="5_rks4m"]
+[ext_resource type="Theme" uid="uid://bboupir43sxmy" path="res://Game/Themes/GamePlayButtons.tres" id="5_wslh2"]
+
+[node name="MainScene" type="Node2D"]
+script = ExtResource("1_7jh2u")
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.184314)
+offset_left = -766.0
+offset_top = -350.0
+offset_right = 2174.0
+offset_bottom = 1351.0
+texture = ExtResource("2_4aqxu")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 34.0
+offset_right = 950.0
+offset_bottom = 293.0
+texture = ExtResource("2_4aqxu")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="Control"]
+offset_left = 622.0
+offset_top = 320.0
+offset_right = 844.0
+offset_bottom = 391.0
+theme = ExtResource("3_vovhb")
+text = "One"
+
+[node name="Button2" type="Button" parent="Control"]
+offset_left = 624.0
+offset_top = 412.0
+offset_right = 846.0
+offset_bottom = 483.0
+theme = ExtResource("3_vovhb")
+text = "Two"
+
+[node name="Button3" type="Button" parent="Control"]
+offset_left = 629.0
+offset_top = 509.0
+offset_right = 851.0
+offset_bottom = 580.0
+theme = ExtResource("3_vovhb")
+text = "Three"
+
+[node name="TimeLabel" type="Label" parent="Control"]
+offset_left = 297.0
+offset_top = 37.0
+offset_right = 442.0
+offset_bottom = 57.0
+theme = ExtResource("4_7vig2")
+text = "Time remaining: "
+
+[node name="StatsLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 1015.0
+offset_top = 53.0
+offset_right = 1094.0
+offset_bottom = 102.0
+theme = ExtResource("4_7vig2")
+
+[node name="RestartButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 349.0
+offset_top = 144.0
+offset_right = 457.0
+offset_bottom = 203.0
+theme = ExtResource("5_wslh2")
+text = "Restart"
+
+[node name="QuitButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 977.0
+offset_top = 151.0
+offset_right = 1088.0
+offset_bottom = 214.0
+theme = ExtResource("5_wslh2")
+text = "Quit"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="InfoLabel" type="Label" parent="."]
+offset_left = 657.0
+offset_top = 601.0
+offset_right = 818.0
+offset_bottom = 625.0
+theme = ExtResource("5_rks4m")
+text = "Maya 20 24"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Control/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Control/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="Control/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
