@@ -34,6 +34,7 @@ texture = ExtResource("2_4aqxu")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="Control"]
+layout_mode = 0
 offset_left = 622.0
 offset_top = 320.0
 offset_right = 844.0
@@ -42,6 +43,7 @@ theme = ExtResource("3_vovhb")
 text = "One"
 
 [node name="Button2" type="Button" parent="Control"]
+layout_mode = 0
 offset_left = 624.0
 offset_top = 412.0
 offset_right = 846.0
@@ -50,6 +52,7 @@ theme = ExtResource("3_vovhb")
 text = "Two"
 
 [node name="Button3" type="Button" parent="Control"]
+layout_mode = 0
 offset_left = 629.0
 offset_top = 509.0
 offset_right = 851.0
@@ -58,6 +61,7 @@ theme = ExtResource("3_vovhb")
 text = "Three"
 
 [node name="TimeLabel" type="Label" parent="Control"]
+layout_mode = 0
 offset_left = 297.0
 offset_top = 37.0
 offset_right = 442.0
