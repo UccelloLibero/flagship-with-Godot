@@ -31,7 +31,7 @@ To run the game locally, follow these steps:
 
 ## Assets
 
-- **Flag Images:** Sourced from [worldometer.com - Flags of the World](https://www.worldometers.info/geography/flags-of-the-world/).
+- **Flag Images:** Sourced from [countryflags.com - Country Flags](https://www.countryflags.com/image-overview/).
 - **Background Image:** Sourced from [Canva](https://www.canva.com/).
 - **Font:** Sourced from the [Godot asset library, open font package by dalton5000](https://godotengine.org/asset-library/asset/316).
 
@@ -50,8 +50,8 @@ For more details, visit [Creative Commons BY-NC-ND 4.0 License](http://creativec
 
 ## Acknowledgments
 
-- Thanks to [worldometer.com](https://www.worldometers.info/) for providing flag images.
+- Thanks to [countryflags.com](https://www.countryflags.com/about/) for providing flag images.
 - Thanks to [Canva](https://www.canva.com/) for the background image.
-- Thanks to dalton5000 for the open font package from the Godot asset library.
+- Thanks to [dalton5000](https://godotengine.org/asset-library/asset/316) for the open font package from the Godot asset library.
 
 Enjoy playing and learning with the Flagship Game!
