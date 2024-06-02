@@ -12,6 +12,9 @@ script = ExtResource("1_7jh2u")
 
 [node name="Background" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0.184314)
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = -766.0
 offset_top = -350.0
 offset_right = 2174.0
@@ -20,12 +23,18 @@ texture = ExtResource("2_4aqxu")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 offset_left = 485.0
 offset_top = 34.0
 offset_right = 950.0
@@ -34,7 +43,12 @@ texture = ExtResource("2_4aqxu")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="Control"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 offset_left = 622.0
 offset_top = 320.0
 offset_right = 844.0
@@ -43,7 +57,12 @@ theme = ExtResource("3_vovhb")
 text = "One"
 
 [node name="Button2" type="Button" parent="Control"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 offset_left = 624.0
 offset_top = 412.0
 offset_right = 846.0
@@ -52,7 +71,12 @@ theme = ExtResource("3_vovhb")
 text = "Two"
 
 [node name="Button3" type="Button" parent="Control"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 offset_left = 629.0
 offset_top = 509.0
 offset_right = 851.0
@@ -78,7 +102,12 @@ offset_bottom = 102.0
 theme = ExtResource("4_7vig2")
 
 [node name="RestartButton" type="Button" parent="Control"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.2
+anchor_right = 0.2
+anchor_bottom = 0.2
 offset_left = 349.0
 offset_top = 144.0
 offset_right = 457.0
@@ -87,7 +116,10 @@ theme = ExtResource("5_wslh2")
 text = "Restart"
 
 [node name="QuitButton" type="Button" parent="Control"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7
+anchor_right = 0.7
 offset_left = 977.0
 offset_top = 151.0
 offset_right = 1088.0
@@ -99,10 +131,17 @@ text = "Quit"
 autostart = true
 
 [node name="InfoLabel" type="Label" parent="."]
-offset_left = 657.0
-offset_top = 601.0
-offset_right = 818.0
-offset_bottom = 625.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 673.0
+offset_top = 615.0
+offset_right = 834.0
+offset_bottom = 639.0
+grow_horizontal = 2
+grow_vertical = 0
 theme = ExtResource("5_rks4m")
 text = "Maya 20 24"
 horizontal_alignment = 1

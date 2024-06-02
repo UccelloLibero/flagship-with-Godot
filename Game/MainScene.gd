@@ -154,9 +154,12 @@ var flags = [
 	{"image": preload("res://Assets/Flags/Poland.png"), "answers": ["Slovenia", "Albania", "Poland"], "correct": 2},
 	# Add more flags here
 ]
+
 var current_flag = {}
 var score = 0
 var time_left = 60
+var correct_answer_given = false
+
 
 # Nodes
 @onready var flag_image = $Control/TextureRect
@@ -190,24 +193,47 @@ func _start_new_round():
 	button1.text = current_flag["answers"][0]
 	button2.text = current_flag["answers"][1]
 	button3.text = current_flag["answers"][2]
+	button1.modulate = Color(1, 1, 1)
+	button2.modulate = Color(1, 1, 1)
+	button3.modulate = Color(1, 1, 1)
+	correct_answer_given = false
 	stats_label.text = str(score)
 	
 	
 # Buttons 
 func _on_button_pressed():
-	_check_answer(0)
+	_check_answer(0, button1)
 
 func _on_button_2_pressed():
-	_check_answer(1)
+	_check_answer(1, button2)
 
 func _on_button_3_pressed():
-	_check_answer(2)
+	_check_answer(2, button3)
 	
 # Function that checks whether the selected answer is correct and updates score accordingly
-func _check_answer(answer_index):
+func _check_answer(answer_index, button):
+	if correct_answer_given:
+		return
+
 	if answer_index == current_flag["correct"]:
 		score += 1
+		button.modulate = Color(0, 1, 0) # Green
+		correct_answer_given = true
+		await _wait_and_start_new_round()
+		_start_new_round()
+	else:
+		button.modulate = Color(1, 0, 0) # Red
+		await _wait_and_reset_button(button)
+		
+# Coroutine to wait and start a new round
+func _wait_and_start_new_round():
+	await get_tree().create_timer(1.0).timeout
 	_start_new_round()
+
+# Coroutine to wait and reset button color
+func _wait_and_reset_button(button):
+	await get_tree().create_timer(1.0).timeout
+	button.modulate = Color(1, 1, 1) # Reset to white
 
 # End game function that displays all stats and supports play again logic
 func _end_game():
