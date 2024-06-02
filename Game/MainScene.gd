@@ -126,6 +126,32 @@ var flags = [
 	{"image": preload("res://Assets/Flags/Montenegro.png"), "answers": ["Montenegro", "Bosnia and Herzegovina", "Albania"], "correct": 0},
 	{"image": preload("res://Assets/Flags/Morocco.png"), "answers": ["Viet Nam", "Morocco", "Tunisia"], "correct": 1},
 	{"image": preload("res://Assets/Flags/Mozambique.png"), "answers": ["Sao Tome and Principe", "Zambia", "Mozambique"], "correct": 2},
+	{"image": preload("res://Assets/Flags/Myanmar.png"), "answers": ["Myanmar", "Papua New Guinea", "Saudi Arabia"], "correct": 0},
+	{"image": preload("res://Assets/Flags/Namibia.png"), "answers": ["Nigeria", "Namibia", "Nauru"], "correct": 1},
+	{"image": preload("res://Assets/Flags/Nauru.png"), "answers": ["Curaçao", "Nauru", "Palau"], "correct": 1},
+	{"image": preload("res://Assets/Flags/Nepal.png"), "answers": ["Monaco", "Philippines", "Nepal"], "correct": 2},
+	{"image": preload("res://Assets/Flags/Netherlands.png"), "answers": ["Netherlands", "Denmark", "Finland"], "correct": 0},
+	{"image": preload("res://Assets/Flags/New Caledonia.png"), "answers": ["Dominica", "Bulgaria", "New Caledonia"], "correct": 2},
+	{"image": preload("res://Assets/Flags/New Zealand.png"), "answers": ["Australia", "New Zealand", "United Kingdom"], "correct": 1},
+	{"image": preload("res://Assets/Flags/Nicaragua.png"), "answers": ["Nicaragua", "Zambia", "Mozambique"], "correct": 0},
+	{"image": preload("res://Assets/Flags/Niger.png"), "answers": ["Niue", "Niger", "Nigeria"], "correct": 1},
+	{"image": preload("res://Assets/Flags/Nigeria.png"), "answers": ["Nigeria", "Rwanda", "Brunei"], "correct": 0},
+	{"image": preload("res://Assets/Flags/Niue.png"), "answers": ["Russia", "Zambia", "Niue"], "correct": 2},
+	{"image": preload("res://Assets/Flags/North Korea.png"), "answers": ["North Korea", "Togo", "Mongolia"], "correct": 0},
+	{"image": preload("res://Assets/Flags/North Macedonia.png"), "answers": ["Romania", "North Macedonia", "Montenegro"], "correct": 1},
+	{"image": preload("res://Assets/Flags/Northern Ireland.png"), "answers": ["Northern Ireland", "Ireland", "Wales"], "correct": 0},
+	{"image": preload("res://Assets/Flags/Northern Mariana.png"), "answers": ["Sao Tome and Principe", "Northern Mariana", "Trinidad and Tobago"], "correct": 1},
+	{"image": preload("res://Assets/Flags/Norway.png"), "answers": ["Norway", "Switzerland", "Denmark"], "correct": 0},
+	{"image": preload("res://Assets/Flags/Oman.png"), "answers": ["Turkey", "Zambia", "Oman"], "correct": 2},
+	{"image": preload("res://Assets/Flags/Pakistan.png"), "answers": ["Estwatini", "Pakistan", "Tonga"], "correct": 1},
+	{"image": preload("res://Assets/Flags/Palau.png"), "answers": ["Palau", "Kazakhstan", "Somalia"], "correct": 0},
+	{"image": preload("res://Assets/Flags/Palestine.png"), "answers": ["Seychelles", "Palestine", "Namibia"], "correct": 1},
+	{"image": preload("res://Assets/Flags/Panama.png"), "answers": ["Guatemala", "Nauru", "Panama"], "correct": 2},
+	{"image": preload("res://Assets/Flags/Papua New Guinea.png"), "answers": ["Guinea-Bissau", "Papua New Guinea", "Saint Lucia"], "correct": 1},
+	{"image": preload("res://Assets/Flags/Paraguay.png"), "answers": ["Paraguay", "Libya", "Malawi"], "correct": 0},
+	{"image": preload("res://Assets/Flags/Peru.png"), "answers": ["Oman", "Peru", "Laos"], "correct": 1},
+	{"image": preload("res://Assets/Flags/Philippines.png"), "answers": ["Philippines", "Myanmar", "Indonesia"], "correct": 0},
+	{"image": preload("res://Assets/Flags/Poland.png"), "answers": ["Slovenia", "Albania", "Poland"], "correct": 2},
 	# Add more flags here
 ]
 var current_flag = {}
@@ -201,7 +227,7 @@ func _on_restart_button_pressed():
 	button1.visible = true
 	button2.visible = true
 	button3.visible = true
-	stats_label.visible = false
+	stats_label.visible = true
 	_start_new_round()
 	timer.start()
 
