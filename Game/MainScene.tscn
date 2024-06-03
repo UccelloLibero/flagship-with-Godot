@@ -7,148 +7,212 @@
 [ext_resource type="Theme" uid="uid://5osc00qbyquo" path="res://Game/Themes/InfoLabels.tres" id="5_rks4m"]
 [ext_resource type="Theme" uid="uid://bboupir43sxmy" path="res://Game/Themes/GamePlayButtons.tres" id="5_wslh2"]
 
-[node name="MainScene" type="Node2D"]
+[node name="MainScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_7jh2u")
 
 [node name="Background" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0.184314)
-anchors_preset = -1
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -766.0
-offset_top = -350.0
-offset_right = 2174.0
-offset_bottom = 1351.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 8
 texture = ExtResource("2_4aqxu")
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 40.0
-offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Control" type="Control" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 485.0
-offset_top = 34.0
-offset_right = 950.0
-offset_bottom = 293.0
+offset_left = -206.0
+offset_top = -309.0
+offset_right = 264.0
+offset_bottom = -49.0
 texture = ExtResource("2_4aqxu")
 expand_mode = 1
 
-[node name="Button" type="Button" parent="Control"]
+[node name="Button" type="Button" parent="MarginContainer/Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 622.0
-offset_top = 320.0
-offset_right = 844.0
-offset_bottom = 391.0
+offset_left = -121.0
+offset_top = -29.0
+offset_right = 179.0
+offset_bottom = 51.0
 theme = ExtResource("3_vovhb")
 text = "One"
 
-[node name="Button2" type="Button" parent="Control"]
+[node name="Button2" type="Button" parent="MarginContainer/Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 624.0
-offset_top = 412.0
-offset_right = 846.0
-offset_bottom = 483.0
+offset_left = -121.0
+offset_top = 71.0
+offset_right = 179.0
+offset_bottom = 151.0
 theme = ExtResource("3_vovhb")
 text = "Two"
 
-[node name="Button3" type="Button" parent="Control"]
+[node name="Button3" type="Button" parent="MarginContainer/Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 629.0
-offset_top = 509.0
-offset_right = 851.0
-offset_bottom = 580.0
+offset_left = -121.0
+offset_top = 171.0
+offset_right = 179.0
+offset_bottom = 251.0
 theme = ExtResource("3_vovhb")
 text = "Three"
 
-[node name="TimeLabel" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 297.0
-offset_top = 37.0
-offset_right = 442.0
-offset_bottom = 57.0
-theme = ExtResource("4_7vig2")
-text = "Time remaining: "
-
-[node name="StatsLabel" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 1015.0
-offset_top = 53.0
-offset_right = 1094.0
-offset_bottom = 102.0
-theme = ExtResource("4_7vig2")
-
-[node name="RestartButton" type="Button" parent="Control"]
+[node name="TimeLabel" type="Label" parent="MarginContainer/Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.2
-anchor_top = 0.2
-anchor_right = 0.2
-anchor_bottom = 0.2
-offset_left = 349.0
-offset_top = 144.0
-offset_right = 457.0
-offset_bottom = 203.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -396.0
+offset_top = -272.0
+offset_right = -251.0
+offset_bottom = -252.0
+theme = ExtResource("4_7vig2")
+text = "Time remaining: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatsLabel" type="Label" parent="MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 304.0
+offset_top = -272.0
+offset_right = 384.0
+offset_bottom = -223.0
+theme = ExtResource("4_7vig2")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="RestartButton" type="Button" parent="MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -381.0
+offset_top = -209.0
+offset_right = -270.0
+offset_bottom = -149.0
 theme = ExtResource("5_wslh2")
 text = "Restart"
 
-[node name="QuitButton" type="Button" parent="Control"]
+[node name="QuitButton" type="Button" parent="MarginContainer/Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.7
-anchor_right = 0.7
-offset_left = 977.0
-offset_top = 151.0
-offset_right = 1088.0
-offset_bottom = 214.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -381.0
+offset_top = -129.0
+offset_right = -270.0
+offset_bottom = -69.0
 theme = ExtResource("5_wslh2")
 text = "Quit"
+
+[node name="InfoLabel" type="Label" parent="MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = 277.0
+offset_right = 104.0
+offset_bottom = 307.0
+theme = ExtResource("5_rks4m")
+text = "Maya 20 24"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayAgainYes" type="Button" parent="MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 325.0
+offset_top = -69.0
+offset_right = 367.0
+offset_bottom = -39.0
+theme = ExtResource("5_wslh2")
+text = "Yes"
+
+[node name="PlayAgainNo" type="Button" parent="MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 325.0
+offset_top = -19.0
+offset_right = 367.0
+offset_bottom = 12.0
+theme = ExtResource("5_wslh2")
+text = "No"
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
-[node name="InfoLabel" type="Label" parent="."]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 673.0
-offset_top = 615.0
-offset_right = 834.0
-offset_bottom = 639.0
-grow_horizontal = 2
-grow_vertical = 0
-theme = ExtResource("5_rks4m")
-text = "Maya 20 24"
-horizontal_alignment = 1
-
-[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Control/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Control/Button3" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="Control/RestartButton" to="." method="_on_restart_button_pressed"]
-[connection signal="pressed" from="Control/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="MarginContainer/Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/Control/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="MarginContainer/Control/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="MarginContainer/Control/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="MarginContainer/Control/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="MarginContainer/Control/PlayAgainYes" to="." method="_on_play_again_yes_pressed"]
+[connection signal="pressed" from="MarginContainer/Control/PlayAgainNo" to="." method="_on_play_again_no_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

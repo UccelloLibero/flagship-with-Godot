@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 # Declare variables
 var flags = [
@@ -157,23 +157,29 @@ var flags = [
 
 var current_flag = {}
 var score = 0
+var wrong_score = 0
 var time_left = 60
-var correct_answer_given = false
+#var correct_answer_given = false
+var first_try = true
 
 
 # Nodes
-@onready var flag_image = $Control/TextureRect
-@onready var button1 = $Control/Button
-@onready var button2 = $Control/Button2
-@onready var button3 = $Control/Button3
+@onready var flag_image = $MarginContainer/Control/TextureRect
+@onready var button1 = $MarginContainer/Control/Button
+@onready var button2 = $MarginContainer/Control/Button2
+@onready var button3 = $MarginContainer/Control/Button3
 @onready var timer = $Timer
-@onready var time_label = $Control/TimeLabel
-@onready var stats_label = $Control/StatsLabel
-@onready var restart_button = $Control/RestartButton
-@onready var quit_button = $Control/QuitButton
+@onready var time_label = $MarginContainer/Control/TimeLabel
+@onready var stats_label = $MarginContainer/Control/StatsLabel
+@onready var restart_button = $MarginContainer/Control/RestartButton
+@onready var quit_button = $MarginContainer/Control/QuitButton
+@onready var play_again_yes = $MarginContainer/Control/PlayAgainYes
+@onready var play_again_no = $MarginContainer/Control/PlayAgainNo
 
 func _ready():
 	stats_label.visible = true
+	play_again_yes.visible = false
+	play_again_no.visible = false
 	_start_new_round()
 	timer.start()
 
@@ -185,7 +191,6 @@ func _process(delta):
 func _on_timer_timeout():
 	time_left -= 1
 	
-
 # Function that randomly displayes flags with answers from the list
 func _start_new_round():
 	current_flag = flags[randi() % flags.size()]
@@ -196,8 +201,10 @@ func _start_new_round():
 	button1.modulate = Color(1, 1, 1)
 	button2.modulate = Color(1, 1, 1)
 	button3.modulate = Color(1, 1, 1)
-	correct_answer_given = false
-	stats_label.text = str(score)
+	first_try = true
+	stats_label.text = "Correct: " + str(score) + " Wrong: " + str(wrong_score)
+	#correct_answer_given = false
+	#stats_label.text = str(score)
 	
 	
 # Buttons 
@@ -212,18 +219,29 @@ func _on_button_3_pressed():
 	
 # Function that checks whether the selected answer is correct and updates score accordingly
 func _check_answer(answer_index, button):
-	if correct_answer_given:
-		return
-
 	if answer_index == current_flag["correct"]:
-		score += 1
+		if first_try:
+			score += 1
 		button.modulate = Color(0, 1, 0) # Green
-		correct_answer_given = true
 		await _wait_and_start_new_round()
-		_start_new_round()
 	else:
+		if first_try:
+			wrong_score += 1
+		first_try = false
 		button.modulate = Color(1, 0, 0) # Red
 		await _wait_and_reset_button(button)
+	#if correct_answer_given:
+		#return
+#
+	#if answer_index == current_flag["correct"]:
+		#score += 1
+		#button.modulate = Color(0, 1, 0) # Green
+		#correct_answer_given = true
+		#await _wait_and_start_new_round()
+		#_start_new_round()
+	#else:
+		#button.modulate = Color(1, 0, 0) # Red
+		#await _wait_and_reset_button(button)
 		
 # Coroutine to wait and start a new round
 func _wait_and_start_new_round():
@@ -243,11 +261,15 @@ func _end_game():
 	button2.visible = false
 	button3.visible = false
 	stats_label.visible = true
-	stats_label.text = "Game Over! Your score: " + str(score) + "\nPlay Again?"
+	stats_label.text = "Game Over! Correct: " + str(score) + " Wrong: " + str(wrong_score) + "\nPlay Again?"
+	play_again_yes.visible = true
+	play_again_no.visible = true
+	#stats_label.text = "Game Over! Your score: " + str(score) + "\nPlay Again?"
 
 # Restart play, timer and stats
 func _on_restart_button_pressed():
 	score = 0
+	wrong_score = 0
 	time_left = 60
 	flag_image.visible = true
 	button1.visible = true
@@ -261,3 +283,21 @@ func _on_restart_button_pressed():
 func _on_quit_button_pressed():
 	get_tree().quit()
 
+# Play again YES
+func _on_play_again_yes_pressed():
+	score = 0
+	wrong_score = 0
+	time_left = 60
+	flag_image.visible = true
+	button1.visible = true
+	button2.visible = true
+	button3.visible = true
+	stats_label.visible = true
+	_start_new_round()
+	timer.start()
+	play_again_yes.visible = false
+	play_again_no.visible = false
+	
+# Play again NO
+func _on_play_again_no_pressed():
+	get_tree().quit()
