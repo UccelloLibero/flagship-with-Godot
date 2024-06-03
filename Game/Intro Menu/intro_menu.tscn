@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=3 uid="uid://bw3jtu2va5p6h"]
+
+[ext_resource type="Texture2D" uid="uid://cncpqawurugse" path="res://Assets/Background/worldmapright.png" id="1_xj3t8"]
+
+[sub_resource type="SystemFont" id="SystemFont_aq382"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_man7o"]
+font_names = PackedStringArray("Comic Sans MS")
+
+[sub_resource type="SystemFont" id="SystemFont_8p4iv"]
+font_names = PackedStringArray("Comic Sans MS")
+
+[node name="IntroMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xj3t8")
+expand_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="BoxContainer" type="BoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+vertical = true
+
+[node name="Control" type="Control" parent="MarginContainer/BoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/BoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_aq382")
+theme_override_font_sizes/font_size = 60
+text = "FLAGSHIP"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/BoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_man7o")
+theme_override_font_sizes/font_size = 20
+text = "Welcome to Flagship Game!
+This game chanllenges players to identify country
+flags from multiple choice options within a 60 seconds time limit. 
+"
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/BoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_8p4iv")
+theme_override_font_sizes/font_size = 20
+text = "Guess correctly the first time and you will earn a point.
+If you guess incorrectly, worry not, you will still
+be able to guess and learn the country of the displayed flag. "

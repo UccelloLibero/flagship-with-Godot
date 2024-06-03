@@ -175,11 +175,13 @@ var first_try = true
 @onready var quit_button = $MarginContainer/Control/QuitButton
 @onready var play_again_yes = $MarginContainer/Control/PlayAgainYes
 @onready var play_again_no = $MarginContainer/Control/PlayAgainNo
+@onready var thank_you = $MarginContainer/Control/ThankYouForPlaying
 
 func _ready():
 	stats_label.visible = true
 	play_again_yes.visible = false
 	play_again_no.visible = false
+	thank_you.visible = false
 	_start_new_round()
 	timer.start()
 
@@ -281,6 +283,8 @@ func _on_restart_button_pressed():
 
 # Quit the game
 func _on_quit_button_pressed():
+	thank_you.visible = true
+	await get_tree().create_timer(2.0).timeout
 	get_tree().quit()
 
 # Play again YES
@@ -300,4 +304,6 @@ func _on_play_again_yes_pressed():
 	
 # Play again NO
 func _on_play_again_no_pressed():
+	thank_you.visible = true
+	await get_tree().create_timer(2.0).timeout
 	get_tree().quit()

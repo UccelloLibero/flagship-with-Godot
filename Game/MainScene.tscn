@@ -1,11 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://c56gn7yjsnsw4"]
+[gd_scene load_steps=9 format=3 uid="uid://c56gn7yjsnsw4"]
 
 [ext_resource type="Script" path="res://Game/MainScene.gd" id="1_7jh2u"]
 [ext_resource type="Texture2D" uid="uid://cd042arow24w5" path="res://Assets/Background/background-image.jpg" id="2_4aqxu"]
+[ext_resource type="Texture2D" uid="uid://nv02vuyi1sjw" path="res://Assets/Background/continents2.png" id="2_trwtr"]
 [ext_resource type="Theme" uid="uid://co422u2sbopcm" path="res://Game/Themes/CountryButtonTheme.tres" id="3_vovhb"]
 [ext_resource type="Theme" uid="uid://dgvc7jtgg5rfw" path="res://Game/Themes/LabelsTheme.tres" id="4_7vig2"]
 [ext_resource type="Theme" uid="uid://5osc00qbyquo" path="res://Game/Themes/InfoLabels.tres" id="5_rks4m"]
 [ext_resource type="Theme" uid="uid://bboupir43sxmy" path="res://Game/Themes/GamePlayButtons.tres" id="5_wslh2"]
+
+[sub_resource type="SystemFont" id="SystemFont_s52rc"]
+font_names = PackedStringArray("Impact")
 
 [node name="MainScene" type="Control"]
 layout_mode = 3
@@ -17,7 +21,7 @@ grow_vertical = 2
 script = ExtResource("1_7jh2u")
 
 [node name="Background" type="TextureRect" parent="."]
-modulate = Color(1, 1, 1, 0.184314)
+modulate = Color(1, 1, 1, 0.407843)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,7 +29,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 8
-texture = ExtResource("2_4aqxu")
+texture = ExtResource("2_trwtr")
+expand_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -204,6 +209,21 @@ offset_right = 367.0
 offset_bottom = 12.0
 theme = ExtResource("5_wslh2")
 text = "No"
+
+[node name="ThankYouForPlaying" type="Label" parent="MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -94.0
+offset_right = 280.0
+offset_bottom = -44.0
+theme_override_fonts/font = SubResource("SystemFont_s52rc")
+theme_override_font_sizes/font_size = 40
+text = "Thank you for playing Flagship!"
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
