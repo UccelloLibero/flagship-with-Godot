@@ -1,0 +1,262 @@
+[gd_scene load_steps=20 format=3 uid="uid://bn2a3fw4ndujd"]
+
+[ext_resource type="Script" path="res://Game/Game Scene/PlayAgain.gd" id="1_xrvba"]
+[ext_resource type="Texture2D" uid="uid://xsf3slo55wox" path="res://Assets/Background/flags.svg" id="1_ycpal"]
+
+[sub_resource type="Gradient" id="Gradient_58m43"]
+offsets = PackedFloat32Array(0, 0.403614, 0.686747, 1)
+colors = PackedColorArray(0, 0.560784, 0.901961, 1, 0.270588, 0.866667, 0.952941, 1, 0.486275, 0.784314, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_cmiyv"]
+gradient = SubResource("Gradient_58m43")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rdc2s"]
+bg_color = Color(0.94902, 0.952941, 0.956863, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_ajdre"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nx55g"]
+bg_color = Color(0.94902, 0.952941, 0.956863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wsip"]
+bg_color = Color(0.992157, 0.992157, 0.992157, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="SystemFont" id="SystemFont_36xx7"]
+font_names = PackedStringArray("Avenir")
+font_weight = 700
+
+[sub_resource type="SystemFont" id="SystemFont_ebrw6"]
+font_names = PackedStringArray("Avenir")
+font_weight = 700
+
+[sub_resource type="SystemFont" id="SystemFont_bfmjg"]
+font_names = PackedStringArray("Avenir")
+font_weight = 700
+
+[sub_resource type="SystemFont" id="SystemFont_4nkmh"]
+font_names = PackedStringArray("Avenir")
+font_weight = 700
+
+[sub_resource type="SystemFont" id="SystemFont_tbyu5"]
+font_names = PackedStringArray("Avenir")
+font_weight = 700
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f8v03"]
+bg_color = Color(0.992157, 0.992157, 0.992157, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4vjv0"]
+
+[sub_resource type="SystemFont" id="SystemFont_5sjh1"]
+font_names = PackedStringArray("Avenir")
+font_weight = 700
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dc2c"]
+bg_color = Color(0.992157, 0.992157, 0.992157, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u8q4f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffi12"]
+bg_color = Color(0.992157, 0.992157, 0.992157, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="PlayAgain" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xrvba")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_cmiyv")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -213.0
+offset_top = -324.0
+offset_right = 201.0
+offset_bottom = 325.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rdc2s")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Control/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0941176, 0.0941176, 0.0941176, 1)
+theme_override_fonts/font = SubResource("SystemFont_ajdre")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_nx55g")
+text = "Flagship"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Control/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(380, 240)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_2wsip")
+
+[node name="GameOverLabel" type="Label" parent="Control/Panel/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.1
+anchor_right = 0.5
+anchor_bottom = 0.1
+offset_left = -68.0
+offset_top = -22.0
+offset_right = 69.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.0941176, 0.0941176, 0.0941176, 1)
+theme_override_fonts/font = SubResource("SystemFont_36xx7")
+theme_override_font_sizes/font_size = 24
+text = "Game over!
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CorrectAnswers" type="Label" parent="Control/Panel/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.349
+anchor_right = 0.5
+anchor_bottom = 0.349
+offset_left = -46.0
+offset_top = -15.76
+offset_right = 47.0
+offset_bottom = 17.24
+theme_override_colors/font_color = Color(0.0941176, 0.0941176, 0.0941176, 1)
+theme_override_fonts/font = SubResource("SystemFont_ebrw6")
+theme_override_font_sizes/font_size = 24
+text = "Correct:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WrongAnswers" type="Label" parent="Control/Panel/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.596
+anchor_right = 0.5
+anchor_bottom = 0.596
+offset_left = -44.0
+offset_top = -16.04
+offset_right = 47.0
+offset_bottom = 16.96
+theme_override_colors/font_color = Color(0.0941176, 0.0941176, 0.0941176, 1)
+theme_override_fonts/font = SubResource("SystemFont_bfmjg")
+theme_override_font_sizes/font_size = 24
+text = "Wrong: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Control/Panel/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.8
+anchor_right = 0.5
+anchor_bottom = 0.8
+offset_left = -63.0
+offset_top = 1.0
+offset_right = 65.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0.0941176, 0.0941176, 0.0941176, 1)
+theme_override_fonts/font = SubResource("SystemFont_4nkmh")
+theme_override_font_sizes/font_size = 24
+text = "Play again?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+alignment = 1
+
+[node name="PlayAgainYes" type="Button" parent="Control/Panel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0941176, 0.0941176, 0.0941176, 1)
+theme_override_fonts/font = SubResource("SystemFont_tbyu5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_f8v03")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4vjv0")
+text = "Yes"
+
+[node name="PlayAgainNo" type="Button" parent="Control/Panel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0941176, 0.0941176, 0.0941176, 1)
+theme_override_fonts/font = SubResource("SystemFont_5sjh1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6dc2c")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u8q4f")
+text = "No"
+
+[node name="Flags" type="Panel" parent="Control/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(400, 180)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_styles/panel = SubResource("StyleBoxFlat_ffi12")
+
+[node name="TextureRect" type="TextureRect" parent="Control/Panel/VBoxContainer/Flags"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ycpal")
+expand_mode = 3
+
+[connection signal="pressed" from="Control/Panel/VBoxContainer/HBoxContainer/PlayAgainYes" to="." method="_on_play_again_yes_pressed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer/HBoxContainer/PlayAgainNo" to="." method="_on_play_again_no_pressed"]

@@ -1,6 +1,0 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://5osc00qbyquo"]
-
-[ext_resource type="FontFile" uid="uid://b2qp8ndlmidjx" path="res://Assets/Font/ttf/KiriFont.ttf" id="1_lleps"]
-
-[resource]
-default_font = ExtResource("1_lleps")

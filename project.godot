@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="Flagship"
+run/main_scene="res://Game/Intro Scene/IntroScene.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [rendering]
 

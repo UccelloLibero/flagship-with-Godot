@@ -1,0 +1,122 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpdduytwaclml"]
+
+[ext_resource type="Script" path="res://Game/Info Scene/InfoScene.gd" id="1_imt0x"]
+[ext_resource type="Texture2D" uid="uid://dh4heil5m5hcd" path="res://Assets/Background/continents1.png" id="2_mdr4y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q147w"]
+bg_color = Color(0.207843, 0.207843, 0.207843, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cyt3v"]
+bg_color = Color(0.207843, 0.207843, 0.207843, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="InfoScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_imt0x")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mdr4y")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -223.0
+offset_right = 223.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "About Flagship"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AboutLabel1" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(460, 150)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "I created this game out of a personal interest and admiration for flags and the nations they represent.  Flags are powerful symbols of a country’s heritage, culture, and pride. Through this game, I aim to share my fascination with flags and promote a greater understanding of the diversity in our world."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="AboutLabel2" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(460, 130)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "The game is designed to help players learn about different flags and appreciate the uniqueness of each nation. By playing, I hope you will not only enjoy the challenge but also gain knowledge about the flags and the countries they symbolize."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="AcknowledgementsLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Acknowledgements"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Acknowledge1" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Flag Images: Sourced from countryflags.com - Country Flags."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Acknowledge2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Backgorund Images: Sourced from Canva by 
+Tanya LeClair of So Swell Edu. "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 472.0
+offset_top = 535.0
+offset_right = 672.0
+offset_bottom = 566.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_q147w")
+text = "Back to the game"
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 573.0
+offset_right = 672.0
+offset_bottom = 603.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_cyt3v")
+text = "Exit
+"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
