@@ -214,6 +214,7 @@ var icon_red = preload("res://Assets/Icons/timer_red.svg")
 
 
 # Nodes
+@onready var ui = $Screen
 @onready var time_label = $Screen/Panel/VBoxContainer3/VBoxContainer/HBoxContainer/Panel/TimerLabel
 @onready var timer_icon = $Screen/Panel/VBoxContainer3/VBoxContainer/HBoxContainer/Panel/TimerIcon
 @onready var flag_image = $Screen/Panel/VBoxContainer3/Panel/TextureRect
@@ -236,10 +237,10 @@ func _ready():
 	set_process(true)
 	correct_label.visible = true
 	wrong_label.visible = true
-	play_again_yes.visible = false
-	play_again_no.visible = false
-	thank_you.visible = false
-	stats_label.visible = false
+	#play_again_yes.visible = false
+	#play_again_no.visible = false
+	#thank_you.visible = false
+	#stats_label.visible = false
 	_start_new_round()
 
 func _process(delta):
@@ -264,6 +265,7 @@ func update_timer():
 	
 # Function that randomly displayes flags with answers from the list
 func _start_new_round():
+	reset_buttons()
 	current_flag = flags[randi() % flags.size()]
 	flag_image.texture = current_flag["image"]
 	button1.text = current_flag["answers"][0]
@@ -276,6 +278,21 @@ func _start_new_round():
 	correct_label.text = " " + str(score)
 	wrong_label.text = " " + str(wrong_score)
 
+func reset_buttons():
+	var default_modulate = Color(1, 1, 1) # white
+	var default_font_color = Color8(24, 24, 24) # dark gray
+
+	button1.modulate = default_modulate
+	button2.modulate = default_modulate
+	button3.modulate = default_modulate
+
+	button1.add_theme_color_override("font_color", default_font_color)
+	button2.add_theme_color_override("font_color", default_font_color)
+	button3.add_theme_color_override("font_color", default_font_color)
+	
+	button1.set_pressed(false)
+	button2.set_pressed(false)
+	button3.set_pressed(false)
 	
 # Buttons 
 func _on_button_pressed():
@@ -293,16 +310,15 @@ func _check_answer(answer_index, button):
 		if first_try:
 			score += 1
 		button.modulate = Color(0, 1, 0) # Green
-		button.add_theme_color_override("font_color", Color8(253, 253, 253)) # White font
+		button.add_theme_color_override("font_color", Color8(24, 24, 24)) # Hex #181818 font
 		await _wait_and_start_new_round()
 	else:
 		if first_try:
 			wrong_score += 1
 		first_try = false
 		button.modulate = Color(1, 0, 0) # Red
-		button.add_theme_color_override("font_color", Color8(253, 253, 253)) # White font
+		button.add_theme_color_override("font_color", Color8(24, 24, 24)) # Hex #181818 font
 		await _wait_and_reset_button(button)
-
 
 
 # Coroutine to wait and start a new round
@@ -314,55 +330,75 @@ func _wait_and_start_new_round():
 func _wait_and_reset_button(button):
 	await get_tree().create_timer(1.0).timeout
 	button.modulate = Color(1, 1, 1) # Reset to white
+	button.add_theme_color_override("font_color", Color8(24, 24, 24)) # Reset to default font color
+	button.set_pressed(false)
 
 # End game function that displays all stats and supports play again logic
 func _end_game():
-	flag_image.visible = false
-	button1.visible = false
-	button2.visible = false
-	button3.visible = false
-	correct_label.visible = false
-	wrong_label.visible = false
-	restart_button.visible = false
-	timer_icon.visible = false
-	time_label.visible = false
-	quit_button.visible = false
-	timer_panel.visible = false
-	answer_panel.visible = false
-	stats_label.text = "Game Over! Correct: " + str(score) + " Wrong: " + str(wrong_score) + "\nPlay Again?"
-	play_again_yes.visible = true
-	play_again_no.visible = true
+	hide_game_elements()
+	show_play_again_scene()
 	
+	#flag_image.visible = false
+	#button1.visible = false
+	#button2.visible = false
+	#button3.visible = false
+	#correct_label.visible = false
+	#wrong_label.visible = false
+	#restart_button.visible = false
+	#timer_icon.visible = false
+	#time_label.visible = false
+	#quit_button.visible = false
+	#timer_panel.visible = false
+	#answer_panel.visible = false
+	#stats_label.text = "Game Over! Correct: " + str(score) + " Wrong: " + str(wrong_score) + "\nPlay Again?"
+	#play_again_yes.visible = true
+	#play_again_no.visible = true
+	
+	
+func hide_game_elements():
+	$Screen.hide()
+
 	
 func _on_restart_button_pressed():
-	score = 0
-	wrong_score = 0
-	time_left = 60
-	flag_image.visible = true
-	button1.visible = true
-	button2.visible = true
-	button3.visible = true
-	correct_label.visible = true
-	wrong_label.visible = true
-	play_again_yes.visible = false
-	play_again_no.visible = false
-	thank_you.visible = false
-	stats_label.visible = false
-	_start_new_round()
+	reset_game()
+	#score = 0
+	#wrong_score = 0
+	#time_left = 60
+	#flag_image.visible = true
+	#button1.visible = true
+	#button2.visible = true
+	#button3.visible = true
+	#correct_label.visible = true
+	#wrong_label.visible = true
+	#play_again_yes.visible = false
+	#play_again_no.visible = false
+	#thank_you.visible = false
+	#stats_label.visible = false
+	#_start_new_round()
 	#timer.start()
 
 # Quit the game
 func _on_quit_button_pressed():
-	thank_you.visible = true
+	#thank_you.visible = true
 	await get_tree().create_timer(2.0).timeout
 	get_tree().quit()
 
 # Fuction to show play again scene
 func show_play_again_scene():
-	var play_again_scene = preload("res://Game/Game Scene/play_again.tscn").instance()
+	var play_again_scene = preload("res://Game/Game Scene/play_again.tscn").instantiate()
 	add_child(play_again_scene)
 	play_again_scene.get_node("Control/Panel/VBoxContainer/Panel/CorrectAnswers").text = "Correct: " + str(score) + "."
 	play_again_scene.get_node("Control/Panel/VBoxContainer/Panel/WrongAnswers").text = "Wrong: " + str(wrong_score) + "."
+	
+func reset_game():
+	score = 0
+	wrong_score = 0
+	time_left = 60
+	show_game_elements()
+	_start_new_round()
+	
+func show_game_elements():
+	$Screen.show()
 
 # Play again YES
 func _on_play_again_yes_pressed():

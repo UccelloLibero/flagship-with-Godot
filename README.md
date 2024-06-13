@@ -33,7 +33,7 @@ To run the game locally, follow these steps:
 
 - **Flag Images:** Sourced from [countryflags.com - Country Flags](https://www.countryflags.com/image-overview/).
 - **Background Image:** Sourced from [Canva](https://www.canva.com/).
-- **Font:** Sourced from the [Godot asset library, open font package by dalton5000](https://godotengine.org/asset-library/asset/316).
+- **Icons:** Sourced from [Icon8](https://icons8.com/icons)
 
 ## License
 
@@ -48,18 +48,11 @@ This work is licensed under a Creative Commons Attribution-NonCommercial-NoDeriv
 
 For more details, visit [Creative Commons BY-NC-ND 4.0 License](http://creativecommons.org/licenses/by-nc-nd/4.0/).
 
-## Credits
-
-### Usability and Beta Tester
-
-Special thanks to [Randall McPherson](https://github.com/rlmcpherson) for invaluable contributions as a beta and usability tester. Randall's thorough evaluation of the gameplay and insightful feedback on player interactions and game information display have significantly improved the overall user experience. 
-
-Thank you for your support! 
 
 ## Acknowledgments
 
 - Thanks to [countryflags.com](https://www.countryflags.com/about/) for providing flag images.
 - Thanks to [Canva](https://www.canva.com/) for the background image.
-- Thanks to [dalton5000](https://godotengine.org/asset-library/asset/316) for the open font package from the Godot asset library.
+- Thanks to [Icon8](https://icons8.com/icons) for icons. 
 
 Enjoy playing and learning with the Flagship Game!
