@@ -33,7 +33,7 @@ To run the game locally, follow these steps:
 
 - **Flag Images:** Sourced from [countryflags.com - Country Flags](https://www.countryflags.com/image-overview/).
 - **Background Image:** Sourced from [Canva](https://www.canva.com/).
-- **Icons:** Sourced from [Icon8](https://icons8.com/icons)
+- **Icons:** Sourced from [Icon8](https://icons8.com/icons).
 
 ## License
 
