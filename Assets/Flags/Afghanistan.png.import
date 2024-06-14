@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmngqq8oa1acp"
-path="res://.godot/imported/Afganistan.png-0a5dbce46be84479632e0f83771dac2c.ctex"
+path="res://.godot/imported/Afghanistan.png-4578d06f8c9840c2bd84a8d67d3e8df9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Flags/Afganistan.png"
-dest_files=["res://.godot/imported/Afganistan.png-0a5dbce46be84479632e0f83771dac2c.ctex"]
+source_file="res://Assets/Flags/Afghanistan.png"
+dest_files=["res://.godot/imported/Afghanistan.png-4578d06f8c9840c2bd84a8d67d3e8df9.ctex"]
 
 [params]
 
