@@ -265,14 +265,16 @@ func populate_country_list():
 		country_list_container.add_child(country_entry)
 
 func _on_play_button_pressed():
-	var game_scene = preload("res://Game/Game Scene/control.tscn").instantiate()
-	get_tree().change_scene_to(game_scene)
+	get_tree().change_scene_to_file("res://Game/Game Scene/control.tscn")
+	#var game_scene = preload("res://Game/Game Scene/control.tscn").instantiate()
+	#get_tree().change_scene_to(game_scene)
 
 func _on_main_button_pressed():
 	var intro_scene = preload("res://Game/Intro Scene/IntroScene.tscn").instantiate()
 	get_tree().change_scene_to(intro_scene)
 
 func _on_quit_button_pressed():
-	#thank_you_label.visible = true
-	await get_tree().create_timer(2.0).timeout
 	get_tree().quit()
+	##thank_you_label.visible = true
+	#await get_tree().create_timer(2.0).timeout
+	#get_tree().quit()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bn2a3fw4ndujd"]
+[gd_scene load_steps=22 format=3 uid="uid://bn2a3fw4ndujd"]
 
 [ext_resource type="Script" path="res://Game/Game Scene/PlayAgain.gd" id="1_xrvba"]
 [ext_resource type="Texture2D" uid="uid://xsf3slo55wox" path="res://Assets/Background/flags.svg" id="1_ycpal"]
@@ -11,70 +11,79 @@ colors = PackedColorArray(0, 0.560784, 0.901961, 1, 0.270588, 0.866667, 0.952941
 gradient = SubResource("Gradient_58m43")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rdc2s"]
-bg_color = Color(0.94902, 0.952941, 0.956863, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+bg_color = Color(0.811765, 0.870588, 0.917647, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="SystemFont" id="SystemFont_ajdre"]
-font_names = PackedStringArray("Impact")
+font_names = PackedStringArray("Optima")
+font_weight = 700
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nx55g"]
-bg_color = Color(0.94902, 0.952941, 0.956863, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+bg_color = Color(0.811765, 0.870588, 0.917647, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wsip"]
-bg_color = Color(0.992157, 0.992157, 0.992157, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+bg_color = Color(0.984314, 0.988235, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="SystemFont" id="SystemFont_36xx7"]
-font_names = PackedStringArray("Avenir")
-font_weight = 700
+font_names = PackedStringArray("Optima")
 
 [sub_resource type="SystemFont" id="SystemFont_ebrw6"]
-font_names = PackedStringArray("Avenir")
-font_weight = 700
+font_names = PackedStringArray("Optima")
 
 [sub_resource type="SystemFont" id="SystemFont_bfmjg"]
-font_names = PackedStringArray("Avenir")
-font_weight = 700
+font_names = PackedStringArray("Optima")
 
 [sub_resource type="SystemFont" id="SystemFont_4nkmh"]
-font_names = PackedStringArray("Avenir")
+font_names = PackedStringArray("Optima")
 font_weight = 700
 
 [sub_resource type="SystemFont" id="SystemFont_tbyu5"]
-font_names = PackedStringArray("Avenir")
+font_names = PackedStringArray("Optima")
 font_weight = 700
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f8v03"]
-bg_color = Color(0.992157, 0.992157, 0.992157, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+bg_color = Color(0.607843, 0.756863, 0.231373, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4vjv0"]
 
 [sub_resource type="SystemFont" id="SystemFont_5sjh1"]
-font_names = PackedStringArray("Avenir")
+font_names = PackedStringArray("Optima")
 font_weight = 700
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6dc2c"]
-bg_color = Color(0.992157, 0.992157, 0.992157, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+bg_color = Color(0.984314, 0.988235, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u8q4f"]
+
+[sub_resource type="SystemFont" id="SystemFont_45dcg"]
+font_names = PackedStringArray("Optima")
+font_weight = 700
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvx5j"]
+bg_color = Color(0.972549, 0.752941, 0.392157, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffi12"]
 bg_color = Color(0.992157, 0.992157, 0.992157, 1)
@@ -136,7 +145,7 @@ theme_override_constants/separation = 20
 [node name="Label" type="Label" parent="Control/Panel/VBoxContainer"]
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.0941176, 0.0941176, 0.0941176, 1)
+theme_override_colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
 theme_override_fonts/font = SubResource("SystemFont_ajdre")
 theme_override_font_sizes/font_size = 42
 theme_override_styles/normal = SubResource("StyleBoxFlat_nx55g")
@@ -219,7 +228,7 @@ offset_left = -63.0
 offset_top = 1.0
 offset_right = 65.0
 offset_bottom = 34.0
-theme_override_colors/font_color = Color(0.0941176, 0.0941176, 0.0941176, 1)
+theme_override_colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
 theme_override_fonts/font = SubResource("SystemFont_4nkmh")
 theme_override_font_sizes/font_size = 24
 text = "Play again?"
@@ -234,7 +243,7 @@ alignment = 1
 [node name="PlayAgainYes" type="Button" parent="Control/Panel/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.0941176, 0.0941176, 0.0941176, 1)
+theme_override_colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
 theme_override_fonts/font = SubResource("SystemFont_tbyu5")
 theme_override_styles/normal = SubResource("StyleBoxFlat_f8v03")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4vjv0")
@@ -248,6 +257,14 @@ theme_override_fonts/font = SubResource("SystemFont_5sjh1")
 theme_override_styles/normal = SubResource("StyleBoxFlat_6dc2c")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_u8q4f")
 text = "No"
+
+[node name="LearnMore" type="Button" parent="Control/Panel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
+theme_override_fonts/font = SubResource("SystemFont_45dcg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rvx5j")
+text = "Learn More"
 
 [node name="Flags" type="Panel" parent="Control/Panel/VBoxContainer"]
 custom_minimum_size = Vector2(400, 180)
@@ -268,3 +285,4 @@ expand_mode = 3
 
 [connection signal="pressed" from="Control/Panel/VBoxContainer/HBoxContainer/PlayAgainYes" to="." method="_on_play_again_yes_pressed"]
 [connection signal="pressed" from="Control/Panel/VBoxContainer/HBoxContainer/PlayAgainNo" to="." method="_on_play_again_no_pressed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer/HBoxContainer/LearnMore" to="." method="_on_learn_more_pressed"]

@@ -2,7 +2,7 @@ extends Control
 
 # Declare variables
 var flags = [
-	{"image": preload("res://Assets/Flags/Afganistan.png"), "answers": ["Afganistan", "Uganda", "Baharin"], "correct": 0},
+	{"image": preload("res://Assets/Flags/Afghanistan.png"), "answers": ["Afghanistan", "Uganda", "Baharin"], "correct": 0},
 	{"image": preload("res://Assets/Flags/Albania.png"), "answers": ["Canada", "Guam", "Albania"], "correct": 2},
 	{"image": preload("res://Assets/Flags/Algeria.png"), "answers": ["Malawi", "Algeria", "Scotland"], "correct": 1},
 	{"image": preload("res://Assets/Flags/Andora.png"), "answers": ["Ukraine", "Turkey", "Andora"], "correct": 2},

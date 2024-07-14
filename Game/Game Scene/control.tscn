@@ -2,36 +2,35 @@
 
 [ext_resource type="Script" path="res://Game/Game Scene/control.gd" id="1_f2inu"]
 [ext_resource type="Texture2D" uid="uid://cd042arow24w5" path="res://Assets/Background/background-image.jpg" id="2_y7lf8"]
-[ext_resource type="Texture2D" uid="uid://72g73xj4fwsk" path="res://Assets/Icons/restart.png" id="3_4qwqx"]
 [ext_resource type="Texture2D" uid="uid://bl5f8oey0rw5o" path="res://Assets/Icons/cancel.png" id="4_4wx72"]
 
-[sub_resource type="Gradient" id="Gradient_5xahx"]
-offsets = PackedFloat32Array(0, 0.38961, 0.824675, 0.918831)
-colors = PackedColorArray(0, 0.466667, 0, 1, 0.407893, 0.75974, 0.587085, 1, 0.513726, 0.854902, 0.721569, 1, 0.537255, 1, 0.435294, 1)
+[sub_resource type="Gradient" id="Gradient_i2fsd"]
+offsets = PackedFloat32Array(0, 0.704819, 1)
+colors = PackedColorArray(0.501961, 0.635294, 0.737255, 1, 0.811765, 0.870588, 0.917647, 1, 0.811765, 0.870588, 0.917647, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_6f7gt"]
-gradient = SubResource("Gradient_5xahx")
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rskt8"]
+gradient = SubResource("Gradient_i2fsd")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dvmqj"]
-bg_color = Color(0.94902, 0.952941, 0.956863, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+bg_color = Color(0.811765, 0.870588, 0.917647, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6lkn8"]
-bg_color = Color(0.992157, 0.992157, 0.992157, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+bg_color = Color(0.984314, 0.988235, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="SystemFont" id="SystemFont_0tu0y"]
 font_names = PackedStringArray("Avenir")
 font_weight = 700
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m3kyo"]
-bg_color = Color(0.992157, 0.992157, 0.992157, 1)
+bg_color = Color(0.792157, 0.796078, 0.811765, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -43,11 +42,11 @@ corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nwapq"]
-bg_color = Color(0.992157, 0.992157, 0.992157, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+bg_color = Color(0.94902, 0.952941, 0.956863, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="SystemFont" id="SystemFont_q35vp"]
 font_names = PackedStringArray("Avenir")
@@ -58,22 +57,18 @@ font_names = PackedStringArray("Avenir")
 font_weight = 700
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jijgd"]
-bg_color = Color(0.992157, 0.992157, 0.992157, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+bg_color = Color(0.94902, 0.952941, 0.956863, 1)
 
 [sub_resource type="SystemFont" id="SystemFont_t54g6"]
 font_names = PackedStringArray("Avenir")
 font_weight = 700
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ixkv"]
-bg_color = Color(0.992157, 0.992157, 0.992157, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+bg_color = Color(0.972549, 0.752941, 0.392157, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_58o0u"]
 
@@ -82,11 +77,11 @@ font_names = PackedStringArray("Avenir")
 font_weight = 700
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_omwwx"]
-bg_color = Color(0.992157, 0.992157, 0.992157, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+bg_color = Color(0.972549, 0.752941, 0.392157, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lh773"]
 
@@ -95,17 +90,29 @@ font_names = PackedStringArray("Avenir")
 font_weight = 700
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pw4ms"]
-bg_color = Color(0.992157, 0.992157, 0.992157, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+bg_color = Color(0.972549, 0.752941, 0.392157, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qpppn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wehdi"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_color = Color(0.8, 0.8, 0.8, 0.686275)
+bg_color = Color(0.168627, 0.509804, 0.231373, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e5g1d"]
+bg_color = Color(0.972549, 0.752941, 0.392157, 1)
+border_color = Color(0.972549, 0.752941, 0.392157, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wbcvv"]
 
@@ -133,7 +140,7 @@ offset_left = -324.0
 offset_top = -162.0
 offset_right = 1596.0
 offset_bottom = 885.0
-texture = SubResource("GradientTexture2D_6f7gt")
+texture = SubResource("GradientTexture1D_rskt8")
 expand_mode = 2
 
 [node name="Screen" type="Control" parent="."]
@@ -215,7 +222,7 @@ size_flags_horizontal = 6
 size_flags_vertical = 4
 
 [node name="TimerLabel" type="Label" parent="Screen/Panel/VBoxContainer3/VBoxContainer/HBoxContainer/Panel"]
-custom_minimum_size = Vector2(50, 50)
+custom_minimum_size = Vector2(55, 55)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.9
@@ -241,7 +248,7 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_nwapq")
 
 [node name="CorrectLabel" type="Label" parent="Screen/Panel/VBoxContainer3/VBoxContainer/HBoxContainer/Panel2"]
-custom_minimum_size = Vector2(50, 50)
+custom_minimum_size = Vector2(55, 55)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.1
@@ -251,7 +258,7 @@ offset_top = 25.0
 offset_right = -153.0
 offset_bottom = 75.0
 size_flags_horizontal = 6
-theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_color = Color(0.0235294, 0.462745, 0.231373, 1)
 theme_override_fonts/font = SubResource("SystemFont_q35vp")
 theme_override_styles/normal = SubResource("StyleBoxFlat_m3kyo")
 text = "0"
@@ -259,7 +266,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="WrongLabel" type="Label" parent="Screen/Panel/VBoxContainer3/VBoxContainer/HBoxContainer/Panel2"]
-custom_minimum_size = Vector2(50, 50)
+custom_minimum_size = Vector2(55, 55)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.4
@@ -269,7 +276,7 @@ offset_top = 25.0
 offset_right = -97.0
 offset_bottom = 75.0
 size_flags_horizontal = 6
-theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0.701961, 0.0117647, 0.129412, 1)
 theme_override_fonts/font = SubResource("SystemFont_bf0ky")
 theme_override_styles/normal = SubResource("StyleBoxFlat_m3kyo")
 text = "0
@@ -283,7 +290,6 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jijgd")
 
 [node name="TextureRect" type="TextureRect" parent="Screen/Panel/VBoxContainer3/Panel"]
-custom_minimum_size = Vector2(150, 200)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -336,17 +342,18 @@ alignment = 1
 
 [node name="RestartButton" type="Button" parent="Screen/Panel/VBoxContainer3/HBoxContainer2"]
 clip_contents = true
-custom_minimum_size = Vector2(150, 50)
+custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.992157, 0.992157, 0.992157, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_wehdi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e5g1d")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_wbcvv")
-icon = ExtResource("3_4qwqx")
-flat = true
+text = "Reset"
 icon_alignment = 1
 
 [node name="QuitButton" type="Button" parent="Screen/Panel/VBoxContainer3/HBoxContainer2"]
 clip_contents = true
-custom_minimum_size = Vector2(150, 50)
+custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_50n8j")
