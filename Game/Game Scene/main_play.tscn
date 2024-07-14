@@ -1,8 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://384b0wlrmagk"]
+[gd_scene load_steps=29 format=3 uid="uid://384b0wlrmagk"]
 
-[ext_resource type="Script" path="res://Game/Game Scene/control.gd" id="1_f2inu"]
-[ext_resource type="Texture2D" uid="uid://cd042arow24w5" path="res://Assets/Background/background-image.jpg" id="2_y7lf8"]
-[ext_resource type="Texture2D" uid="uid://bl5f8oey0rw5o" path="res://Assets/Icons/cancel.png" id="4_4wx72"]
+[ext_resource type="Script" path="res://Game/Game Scene/MainPlay.gd" id="1_lysr8"]
+[ext_resource type="Texture2D" uid="uid://cd042arow24w5" path="res://Assets/Background/background-image.jpg" id="2_5h4v7"]
 
 [sub_resource type="Gradient" id="Gradient_i2fsd"]
 offsets = PackedFloat32Array(0, 0.704819, 1)
@@ -98,9 +97,12 @@ corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qpppn"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wehdi"]
-bg_color = Color(0.168627, 0.509804, 0.231373, 1)
-border_color = Color(0.8, 0.8, 0.8, 0)
+[sub_resource type="SystemFont" id="SystemFont_rrthi"]
+font_names = PackedStringArray("Optima")
+font_weight = 700
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tvc14"]
+bg_color = Color(0.607843, 0.756863, 0.231373, 1)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -116,23 +118,27 @@ corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wbcvv"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_50n8j"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-corner_radius_top_left = 1000
-corner_radius_top_right = 1000
-corner_radius_bottom_right = 1000
-corner_radius_bottom_left = 1000
+[sub_resource type="SystemFont" id="SystemFont_xt1mm"]
+font_names = PackedStringArray("Optima")
+font_weight = 700
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0si5q"]
+bg_color = Color(0.984314, 0.988235, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uiqk5"]
 
-[node name="Control" type="Control"]
+[node name="MainPlay" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_f2inu")
+script = ExtResource("1_lysr8")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -296,7 +302,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_y7lf8")
+texture = ExtResource("2_5h4v7")
 expand_mode = 3
 
 [node name="GuessButtonsContainer" type="VBoxContainer" parent="Screen/Panel/VBoxContainer3"]
@@ -344,8 +350,9 @@ alignment = 1
 clip_contents = true
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.992157, 0.992157, 0.992157, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_wehdi")
+theme_override_colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
+theme_override_fonts/font = SubResource("SystemFont_rrthi")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tvc14")
 theme_override_styles/hover = SubResource("StyleBoxFlat_e5g1d")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_wbcvv")
 text = "Reset"
@@ -355,11 +362,12 @@ icon_alignment = 1
 clip_contents = true
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_50n8j")
+theme_override_colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
+theme_override_fonts/font = SubResource("SystemFont_xt1mm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_0si5q")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_uiqk5")
-icon = ExtResource("4_4wx72")
-flat = true
+text = "Quit
+"
 icon_alignment = 1
 
 [connection signal="pressed" from="Screen/Panel/VBoxContainer3/GuessButtonsContainer/Button" to="." method="_on_button_pressed"]

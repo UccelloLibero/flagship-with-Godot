@@ -10,7 +10,7 @@ extends Control
 
 
 func _on_play_again_yes_pressed():
-	get_tree().change_scene_to_file("res://Game/Game Scene/control.tscn")
+	get_tree().change_scene_to_file("res://Game/Game Scene/main_play.tscn")
 
 func _on_play_again_no_pressed():
 	get_tree().quit()

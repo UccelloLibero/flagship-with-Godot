@@ -265,7 +265,7 @@ func populate_country_list():
 		country_list_container.add_child(country_entry)
 
 func _on_play_button_pressed():
-	get_tree().change_scene_to_file("res://Game/Game Scene/control.tscn")
+	get_tree().change_scene_to_file("res://Game/Game Scene/main_play.tscn")
 	#var game_scene = preload("res://Game/Game Scene/control.tscn").instantiate()
 	#get_tree().change_scene_to(game_scene)
 
