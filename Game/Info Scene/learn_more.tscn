@@ -10,10 +10,10 @@ gradient = SubResource("Gradient_kv7qp")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mqxo2"]
 bg_color = Color(0.811765, 0.870588, 0.917647, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="SystemFont" id="SystemFont_yghi6"]
 font_names = PackedStringArray("Optima")
