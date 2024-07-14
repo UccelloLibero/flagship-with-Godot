@@ -220,10 +220,10 @@ var country_data = [
 ]
 
 @onready var country_list_container = $Control/VBoxContainer/ScrollContainer/VBoxContainer
-@onready var play_button = $VBoxContainer/HBoxContainer/PlayButton
-@onready var main_button = $VBoxContainer/HBoxContainer/MainButton
-@onready var quit_button = $VBoxContainer/HBoxContainer/QuitButton
-@onready var thank_you_label = $ThankYouLabel
+@onready var play_button = $Control/VBoxContainer/HBoxContainer/PlayButton
+@onready var main_button = $Control/VBoxContainer/HBoxContainer/MainButton
+@onready var quit_button = $Control/VBoxContainer/HBoxContainer/QuitButton
+
 
 var custom_theme
 
@@ -270,8 +270,9 @@ func _on_play_button_pressed():
 	#get_tree().change_scene_to(game_scene)
 
 func _on_main_button_pressed():
-	var intro_scene = preload("res://Game/Intro Scene/IntroScene.tscn").instantiate()
-	get_tree().change_scene_to(intro_scene)
+	get_tree().change_scene_to_file("res://Game/Intro Scene/intro_scene.tscn")
+	#var intro_scene = preload("res://Game/Intro Scene/IntroScene.tscn").instantiate()
+	#get_tree().change_scene_to(intro_scene)
 
 func _on_quit_button_pressed():
 	get_tree().quit()

@@ -306,7 +306,7 @@ texture = ExtResource("2_5h4v7")
 expand_mode = 3
 
 [node name="GuessButtonsContainer" type="VBoxContainer" parent="Screen/Panel/VBoxContainer3"]
-custom_minimum_size = Vector2(300, 200)
+custom_minimum_size = Vector2(420, 200)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
@@ -314,7 +314,7 @@ theme_override_constants/separation = 20
 alignment = 1
 
 [node name="Button" type="Button" parent="Screen/Panel/VBoxContainer3/GuessButtonsContainer"]
-custom_minimum_size = Vector2(100, 40)
+custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.0941176, 0.0941176, 0.0941176, 1)
 theme_override_fonts/font = SubResource("SystemFont_t54g6")
@@ -323,7 +323,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_58o0u")
 text = "One"
 
 [node name="Button2" type="Button" parent="Screen/Panel/VBoxContainer3/GuessButtonsContainer"]
-custom_minimum_size = Vector2(100, 40)
+custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.0941176, 0.0941176, 0.0941176, 1)
 theme_override_fonts/font = SubResource("SystemFont_73q4r")
@@ -333,7 +333,7 @@ text = "Two
 "
 
 [node name="Button3" type="Button" parent="Screen/Panel/VBoxContainer3/GuessButtonsContainer"]
-custom_minimum_size = Vector2(100, 40)
+custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.0941176, 0.0941176, 0.0941176, 1)
 theme_override_fonts/font = SubResource("SystemFont_4bcc0")
@@ -344,11 +344,12 @@ text = "Three
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Screen/Panel/VBoxContainer3"]
 layout_mode = 2
+theme_override_constants/separation = 20
 alignment = 1
 
 [node name="RestartButton" type="Button" parent="Screen/Panel/VBoxContainer3/HBoxContainer2"]
 clip_contents = true
-custom_minimum_size = Vector2(100, 50)
+custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
 theme_override_fonts/font = SubResource("SystemFont_rrthi")
@@ -360,7 +361,7 @@ icon_alignment = 1
 
 [node name="QuitButton" type="Button" parent="Screen/Panel/VBoxContainer3/HBoxContainer2"]
 clip_contents = true
-custom_minimum_size = Vector2(100, 50)
+custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
 theme_override_fonts/font = SubResource("SystemFont_xt1mm")

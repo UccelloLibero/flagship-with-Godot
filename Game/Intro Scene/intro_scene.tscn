@@ -1,0 +1,205 @@
+[gd_scene load_steps=17 format=3 uid="uid://dnthdtuyuuq5p"]
+
+[ext_resource type="Script" path="res://Game/Intro Scene/Intro_Scene.gd" id="1_i213e"]
+
+[sub_resource type="Gradient" id="Gradient_qy4q1"]
+colors = PackedColorArray(0.434243, 0.567782, 0.671003, 1, 0.811765, 0.870588, 0.917647, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ydkbj"]
+gradient = SubResource("Gradient_qy4q1")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nvblj"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(1, 0.980392, 0.941176, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="SystemFont" id="SystemFont_03wv3"]
+font_names = PackedStringArray("Optima")
+font_weight = 700
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amhd5"]
+content_margin_top = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(1, 0.980392, 0.941176, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="SystemFont" id="SystemFont_2njw4"]
+font_names = PackedStringArray("Optima")
+font_weight = 500
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ot8f"]
+content_margin_left = 10.0
+content_margin_top = 20.0
+content_margin_right = 10.0
+content_margin_bottom = 20.0
+bg_color = Color(1, 0.980392, 0.941176, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_p2fnx"]
+font_names = PackedStringArray("Optima")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7hxl"]
+content_margin_left = 10.0
+content_margin_top = 20.0
+content_margin_right = 10.0
+content_margin_bottom = 20.0
+bg_color = Color(1, 0.980392, 0.941176, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_q8s1h"]
+font_names = PackedStringArray("Optima")
+font_weight = 700
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hmcdg"]
+bg_color = Color(0.607843, 0.756863, 0.231373, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="SystemFont" id="SystemFont_0muru"]
+font_names = PackedStringArray("Optima")
+font_weight = 700
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7yn22"]
+bg_color = Color(0.972549, 0.752941, 0.392157, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="SystemFont" id="SystemFont_iwgui"]
+font_names = PackedStringArray("Optima")
+font_weight = 700
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7pr1"]
+bg_color = Color(0.811765, 0.870588, 0.917647, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="IntroScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i213e")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -207.0
+offset_top = -89.0
+offset_right = 1349.0
+offset_bottom = 782.0
+texture = SubResource("GradientTexture1D_ydkbj")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -271.0
+offset_top = -325.0
+offset_right = 237.0
+offset_bottom = 323.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nvblj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -235.0
+offset_top = -302.0
+offset_right = 235.0
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Control/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
+theme_override_fonts/font = SubResource("SystemFont_03wv3")
+theme_override_font_sizes/font_size = 68
+theme_override_styles/normal = SubResource("StyleBoxFlat_amhd5")
+text = "Flagship"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Welcome" type="Label" parent="Control/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
+theme_override_fonts/font = SubResource("SystemFont_2njw4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5ot8f")
+text = "Welcome to Flagship!
+This game challenges players to identify country
+flags from multiple choice options within a 60 second time limit. "
+
+[node name="Instructions" type="Label" parent="Control/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
+theme_override_fonts/font = SubResource("SystemFont_p2fnx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_q7hxl")
+text = "Guess correctly the first time and you will earn a point.
+If you guess incorrectly, worry not, you will still
+be able to guess and learn the country of the displayed flag. "
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/Panel"]
+layout_mode = 2
+offset_left = 21.0
+offset_top = 411.0
+offset_right = 491.0
+offset_bottom = 477.0
+theme_override_constants/separation = 20
+
+[node name="PlayFlagship" type="Button" parent="Control/Panel/VBoxContainer2"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
+theme_override_fonts/font = SubResource("SystemFont_q8s1h")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hmcdg")
+text = "Play Flagship"
+
+[node name="AboutFlagship" type="Button" parent="Control/Panel/VBoxContainer2"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
+theme_override_fonts/font = SubResource("SystemFont_0muru")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7yn22")
+text = "About Flagship"
+
+[node name="LearnFlags" type="Button" parent="Control/Panel/VBoxContainer2"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
+theme_override_fonts/font = SubResource("SystemFont_iwgui")
+theme_override_styles/normal = SubResource("StyleBoxFlat_c7pr1")
+text = "Learn About Flags"
+
+[connection signal="pressed" from="Control/Panel/VBoxContainer2/PlayFlagship" to="." method="_on_play_flagship_pressed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer2/AboutFlagship" to="." method="_on_about_flagship_pressed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer2/LearnFlags" to="." method="_on_learn_flags_pressed"]

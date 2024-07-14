@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c8ot32wrro53r"]
+[gd_scene load_steps=21 format=3 uid="uid://c8ot32wrro53r"]
 
 [ext_resource type="Script" path="res://Game/Info Scene/about_game.gd" id="1_p0a1x"]
 
@@ -20,8 +20,8 @@ font_names = PackedStringArray("Optima")
 font_weight = 700
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gntld"]
-content_margin_top = 20.0
-content_margin_bottom = 20.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
 bg_color = Color(0.811765, 0.870588, 0.917647, 1)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
@@ -84,6 +84,17 @@ font_weight = 700
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ocphe"]
 bg_color = Color(0.984314, 0.988235, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="SystemFont" id="SystemFont_vitwx"]
+font_names = PackedStringArray("Optima")
+font_weight = 700
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hxm78"]
+bg_color = Color(0.972549, 0.752941, 0.392157, 1)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -175,7 +186,7 @@ text = "Acknowledgements"
 horizontal_alignment = 1
 
 [node name="Label5" type="Label" parent="Control/Panel/VBoxContainer"]
-custom_minimum_size = Vector2(200, 100)
+custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
 theme_override_fonts/font = SubResource("SystemFont_t08ly")
@@ -183,7 +194,15 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_yyfq1")
 text = "Flag Images: Sourced from countryflags.com - Country Flags."
 autowrap_mode = 2
 
-[node name="Play" type="Button" parent="Control/Panel/VBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 450.0
+offset_right = 444.0
+offset_bottom = 609.0
+theme_override_constants/separation = 10
+
+[node name="Play" type="Button" parent="Control/Panel/VBoxContainer2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
@@ -191,7 +210,7 @@ theme_override_fonts/font = SubResource("SystemFont_7dgmg")
 theme_override_styles/normal = SubResource("StyleBoxFlat_6uaqr")
 text = "Play"
 
-[node name="Quit" type="Button" parent="Control/Panel/VBoxContainer"]
+[node name="Quit" type="Button" parent="Control/Panel/VBoxContainer2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
@@ -199,5 +218,14 @@ theme_override_fonts/font = SubResource("SystemFont_yeprb")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ocphe")
 text = "Quit"
 
-[connection signal="pressed" from="Control/Panel/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Control/Panel/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[node name="LearnFlags" type="Button" parent="Control/Panel/VBoxContainer2"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
+theme_override_fonts/font = SubResource("SystemFont_vitwx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hxm78")
+text = "Learn About Flags"
+
+[connection signal="pressed" from="Control/Panel/VBoxContainer2/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer2/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Control/Panel/VBoxContainer2/LearnFlags" to="." method="_on_learn_flags_pressed"]

@@ -1,5 +1,5 @@
 [gd_resource type="SystemFont" format=3 uid="uid://evdwr32pen1f"]
 
 [resource]
-font_names = PackedStringArray("Avenir")
-font_weight = 700
+font_names = PackedStringArray("Optima")
+font_weight = 500
