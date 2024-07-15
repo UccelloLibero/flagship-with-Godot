@@ -32,8 +32,6 @@ To run the game locally, follow these steps:
 ## Assets
 
 - **Flag Images:** Sourced from [countryflags.com - Country Flags](https://www.countryflags.com/image-overview/).
-- **Background Image:** Sourced from [Canva](https://www.canva.com/).
-- **Icons:** Sourced from [Icon8](https://icons8.com/icons).
 
 ## License
 
@@ -52,7 +50,5 @@ For more details, visit [Creative Commons BY-NC-ND 4.0 License](http://creativec
 ## Acknowledgments
 
 - Thanks to [countryflags.com](https://www.countryflags.com/about/) for providing flag images.
-- Thanks to [Canva](https://www.canva.com/) for the background image.
-- Thanks to [Icon8](https://icons8.com/icons) for icons. 
 
 Enjoy playing and learning with the Flagship Game!
