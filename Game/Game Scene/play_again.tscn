@@ -238,6 +238,7 @@ vertical_alignment = 1
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/Panel/VBoxContainer"]
 custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
+theme_override_constants/separation = 40
 alignment = 1
 
 [node name="PlayAgainYes" type="Button" parent="Control/Panel/VBoxContainer/HBoxContainer"]
