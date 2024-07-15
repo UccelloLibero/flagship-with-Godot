@@ -46,6 +46,13 @@ This work is licensed under a Creative Commons Attribution-NonCommercial-NoDeriv
 
 For more details, visit [Creative Commons BY-NC-ND 4.0 License](http://creativecommons.org/licenses/by-nc-nd/4.0/).
 
+## Credits
+
+### Usability and Beta Tester
+
+Special thanks to [Randall McPherson](https://github.com/rlmcpherson) for invaluable contributions as a beta and usability tester. Randall's thorough evaluation of the gameplay and insightful feedback on player interactions and game information display have significantly improved the overall user experience. 
+
+Thank you for your support! 
 
 ## Acknowledgments
 
